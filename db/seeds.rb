@@ -7,3 +7,11 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+16.times do |i|
+  Product.create!(
+    name: "Product #{i + 1}",
+    description: "This is the description for product #{i + 1}.",
+    price: (i + 1) * 10.00
+  )
+end

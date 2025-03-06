@@ -9,7 +9,7 @@
     <div class="text-left">
       <h1 class="display-4 mb-3 text-4xl font-bold"><%= @product.name %></h1>
       <p class="lead"><%= @product.description %></p>
-      <p class="text-muted text-lg">Price: <strong class="h5"><%= number_to_currency(@product.price) %></p>
+      <p class="text-muted text-lg">Price: <strong class="h5"><%= number_to_currency(@product.price, :unit => "฿", format: "%n %u") %></p>
 </strong>
       <hr class="my-4">
 

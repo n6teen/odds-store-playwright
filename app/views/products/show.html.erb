@@ -1,0 +1,21 @@
+<div class="container mt-5">
+  <div class="shadow-sm rounded p-4 d-flex">
+    <div class="flex-row">
+    <div class="me-4">
+      <%= image_tag 'image.png', class: "img-fluid rounded", alt: @product.name, size: "300x300" %>
+    </div>
+
+    <!-- Text Info Section -->
+    <div class="text-left">
+      <h1 class="display-4 mb-3 text-4xl font-bold"><%= @product.name %></h1>
+      <p class="lead"><%= @product.description %></p>
+      <p class="text-muted text-lg">Price: <strong class="h5"><%= number_to_currency(@product.price) %></p>
+</strong>
+      <hr class="my-4">
+
+      <h2 class="h4 mb-3 text-2xl font-bold">Customer Details</h2>
+      <%= render 'customer_detail' %>
+    </div>
+    </div>
+  </div>
+</div>

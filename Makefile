@@ -25,11 +25,15 @@ create:
 
 run: install migrate
 	@echo "Starting development server..."
-	bin/rails s
+	bin/dev
 
 test:
 	@echo "Running tests..."
 	bundle exec rspec
+
+seed:
+	@echo "Seeding database..."
+	bin/rails db:seed
 
 cov:
 	open coverage/index.html
